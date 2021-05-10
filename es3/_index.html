@@ -11,6 +11,43 @@
 
 <body>
     <div id="root">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ROOM NUMBER</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(room, index) in rooms" :key="index" @click="getRoomDetails(room.id)">
+                    <td>{{room.id}}</td>
+                    <td>{{room.room_number}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="4">
+                        DETAILS ROOM
+                    </th>
+                </tr>
+                <tr>
+                    <th>BEDS</th>
+                    <th>FLOOR</th>
+                    <th>ROOM NUMBER</th>
+                    <th>ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{room.beds}}</td>
+                    <td>{{room.floor}}</td>
+                    <td>{{room.room_number}}</td>
+                    <td>{{room.id}}</td>
+                </tr>
+            </tbody>
+        </table>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue "></script>
